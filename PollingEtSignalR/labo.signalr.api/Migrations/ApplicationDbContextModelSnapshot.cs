@@ -38,7 +38,7 @@ namespace labo.signalr.api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UselessTasks");
+                    b.ToTable("UselessTasks", (string)null);
                 });
 #pragma warning restore 612, 618
         }

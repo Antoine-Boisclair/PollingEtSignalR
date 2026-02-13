@@ -52,7 +52,7 @@ export class PollingComponent implements OnInit {
   async updateTasks() {
     // TODO: Faire une première implémentation simple avec un appel au serveur pour obtenir la liste des tâches
     this.tasks = await lastValueFrom(this.http.get<any>(this.apiUrl + "UselessTasks/GetAll"))
-    console.log(this.tasks)
+
     // TODO: UNE FOIS QUE VOUS AVEZ TESTER AVEC DEUX CLIENTS: Utiliser le polling pour mettre la liste de tasks à jour chaque seconde
     setTimeout(() => {this.updateTasks()}, 1000);
   }
